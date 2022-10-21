@@ -446,10 +446,12 @@ public class Main {
         JButton btnPlus = new JButton("+");
         btnPlus.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                first=Double.parseDouble(textField.getText());
+//                first=Double.parseDouble(textField.getText());
 
-                textField.setText("");
-
+                //adding append string
+                String s = textField.getText();
+                textField.setText(s+"+");
+                //closing
 
                 operation="+";
             }
@@ -461,8 +463,12 @@ public class Main {
         JButton btnSub = new JButton("-");
         btnSub.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                first=Double.parseDouble(textField.getText());
-                textField.setText("");
+//                first=Double.parseDouble(textField.getText());
+
+                //adding append string
+                String s = textField.getText();
+                textField.setText(s+"-");
+                //closing
                 operation="-";
             }
         });
@@ -473,8 +479,13 @@ public class Main {
         JButton btnMul = new JButton("*");
         btnMul.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                first=Double.parseDouble(textField.getText());
-                textField.setText("");
+//                first=Double.parseDouble(textField.getText());
+
+                //adding append string
+                String s = textField.getText();
+                textField.setText(s+"*");
+                //closing
+
                 operation="*";
             }
         });
@@ -485,8 +496,15 @@ public class Main {
         JButton btnDivide = new JButton("/");
         btnDivide.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                first=Double.parseDouble(textField.getText());
-                textField.setText("");
+//                first=Double.parseDouble(textField.getText());
+
+
+                //adding append string
+                String s = textField.getText();
+                textField.setText(s+"/");
+                //closing
+
+
                 operation="/";
             }
         });
