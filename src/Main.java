@@ -168,47 +168,48 @@ public class Main {
         btnEqual.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 String answer;
-                second=Double.parseDouble(textField.getText());
-                if(operation=="+")
-                {
-                    result=first+second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="-")
-                {
-                    result=first-second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="*")
-                {
-                    result=first*second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="/")
-                {
-                    result=first/second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="%")
-                {
-                    result=first%second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="X^Y")
-                {
-                    double resultt=1;
-                    for(int i=0;i<second;i++)
-                    {
-                        resultt=first*resultt;
-                        answer=String.format("%.2f", resultt);
-                        textField.setText(answer);
-                    }
-                }
+//                second=Double.parseDouble(textField.getText());
+                System.out.println(textField.getText());
+//                if(operation=="+")
+//                {
+//                    result=first+second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="-")
+//                {
+//                    result=first-second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="*")
+//                {
+//                    result=first*second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="/")
+//                {
+//                    result=first/second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="%")
+//                {
+//                    result=first%second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="X^Y")
+//                {
+//                    double resultt=1;
+//                    for(int i=0;i<second;i++)
+//                    {
+//                        resultt=first*resultt;
+//                        answer=String.format("%.2f", resultt);
+//                        textField.setText(answer);
+//                    }
+//                }
 
             }
         });
