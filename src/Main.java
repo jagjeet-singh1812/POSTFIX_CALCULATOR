@@ -8,6 +8,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Scanner;
 import javax.swing.JSeparator;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
@@ -35,8 +36,6 @@ public class Main {
                 try {
                     Main window = new Main();
                     window.frame.setVisible(true);
-
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -170,6 +169,8 @@ public class Main {
                 String answer;
 //                second=Double.parseDouble(textField.getText());
                 System.out.println(textField.getText());
+                System.out.println(InfixToPostfix.convert(textField.getText()));
+                System.out.println(PostfixEval.evaluatePostfix(InfixToPostfix.convert(textField.getText())));
 //                if(operation=="+")
 //                {
 //                    result=first+second;
