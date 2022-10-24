@@ -54,6 +54,8 @@ public class Main {
      * Initialize the contents of the frame.
      */
     private void initialize() {
+        
+       // System.out.println("I am able to commit changes");
         frame = new JFrame();
         frame.setForeground(Color.WHITE);
         frame.getContentPane().setForeground(Color.BLACK);
