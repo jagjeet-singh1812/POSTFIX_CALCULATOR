@@ -8,6 +8,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Scanner;
 import javax.swing.JSeparator;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
@@ -35,8 +36,6 @@ public class Main {
                 try {
                     Main window = new Main();
                     window.frame.setVisible(true);
-
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -168,47 +167,50 @@ public class Main {
         btnEqual.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 String answer;
-                second=Double.parseDouble(textField.getText());
-                if(operation=="+")
-                {
-                    result=first+second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="-")
-                {
-                    result=first-second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="*")
-                {
-                    result=first*second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="/")
-                {
-                    result=first/second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="%")
-                {
-                    result=first%second;
-                    answer=String.format("%.2f", result);
-                    textField.setText(answer);
-                }
-                else if(operation=="X^Y")
-                {
-                    double resultt=1;
-                    for(int i=0;i<second;i++)
-                    {
-                        resultt=first*resultt;
-                        answer=String.format("%.2f", resultt);
-                        textField.setText(answer);
-                    }
-                }
+//                second=Double.parseDouble(textField.getText());
+                System.out.println(textField.getText());
+                System.out.println(InfixToPostfix.convert(textField.getText()));
+                System.out.println(PostfixEval.evaluatePostfix(InfixToPostfix.convert(textField.getText())));
+//                if(operation=="+")
+//                {
+//                    result=first+second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="-")
+//                {
+//                    result=first-second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="*")
+//                {
+//                    result=first*second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="/")
+//                {
+//                    result=first/second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="%")
+//                {
+//                    result=first%second;
+//                    answer=String.format("%.2f", result);
+//                    textField.setText(answer);
+//                }
+//                else if(operation=="X^Y")
+//                {
+//                    double resultt=1;
+//                    for(int i=0;i<second;i++)
+//                    {
+//                        resultt=first*resultt;
+//                        answer=String.format("%.2f", resultt);
+//                        textField.setText(answer);
+//                    }
+//                }
 
             }
         });
