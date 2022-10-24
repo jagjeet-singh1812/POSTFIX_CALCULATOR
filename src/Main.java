@@ -61,13 +61,26 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
 
-        textField = new JTextField();
+        textField = new JTextField("postfix");
         textField.setFont(new Font("Tahoma", Font.BOLD, 15));
-        textField.setBounds(10, 39, 320, 63);
+        textField.setBounds(10, 39, 320, 53);
         frame.getContentPane().add(textField);
         textField.setColumns(10);
 
-        JLabel lblNewLabel = new JLabel("SCIENTFIC CALCULATOR");
+
+        textField = new JTextField();
+        textField.setFont(new Font("Tahoma", Font.BOLD, 15));
+        textField.setBounds(10, 100, 320, 53);
+        frame.getContentPane().add(textField);
+        textField.setColumns(10);
+
+        textField = new JTextField();
+        textField.setFont(new Font("Tahoma", Font.BOLD, 15));
+        textField.setBounds(10, 160, 320, 53);
+        frame.getContentPane().add(textField);
+        textField.setColumns(10);
+
+        JLabel lblNewLabel = new JLabel("POSTFIX CALCULATOR");
         lblNewLabel.setBounds(10, 11, 320, 27);
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
         frame.getContentPane().add(lblNewLabel);
@@ -115,18 +128,18 @@ public class Main {
         btnC.setBounds(139, 243, 64, 50);
         frame.getContentPane().add(btnC);
 
-        JButton btnLn = new JButton("sinh");
-        btnLn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.sinh(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
-
-            }
-        });
-        btnLn.setFont(new Font("Tahoma", Font.PLAIN, 13));
-        btnLn.setBounds(139, 191, 64, 50);
-        frame.getContentPane().add(btnLn);
+//        JButton btnLn = new JButton("sinh");
+//        btnLn.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.sinh(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnLn.setFont(new Font("Tahoma", Font.PLAIN, 13));
+//        btnLn.setBounds(139, 191, 64, 50);
+//        frame.getContentPane().add(btnLn);
 
         JButton btn0 = new JButton("0");
         btn0.addActionListener(new ActionListener() {
@@ -139,18 +152,18 @@ public class Main {
         btn0.setBounds(74, 449, 129, 50);
         frame.getContentPane().add(btn0);
 
-        JButton btnSin = new JButton("sin");
-        btnSin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.sin(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
-
-            }
-        });
-        btnSin.setFont(new Font("Tahoma", Font.BOLD, 12));
-        btnSin.setBounds(139, 139, 64, 50);
-        frame.getContentPane().add(btnSin);
+//        JButton btnSin = new JButton("sin");
+//        btnSin.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.sin(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnSin.setFont(new Font("Tahoma", Font.BOLD, 12));
+//        btnSin.setBounds(139, 139, 64, 50);
+//        frame.getContentPane().add(btnSin);
 
         JButton btnDot = new JButton(".");
         btnDot.addActionListener(new ActionListener() {
@@ -232,19 +245,19 @@ public class Main {
         btnXrx.setBounds(10, 243, 64, 50);
         frame.getContentPane().add(btnXrx);
 
-        JButton btnLog = new JButton("log");
-        btnLog.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.log(Double.parseDouble(textField.getText()));
-
-                textField.setText("");
-                textField.setText(textField.getText()+a);
-
-            }
-        });
-        btnLog.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        btnLog.setBounds(74, 192, 64, 50);
-        frame.getContentPane().add(btnLog);
+//        JButton btnLog = new JButton("log");
+//        btnLog.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.log(Double.parseDouble(textField.getText()));
+//
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnLog.setFont(new Font("Tahoma", Font.PLAIN, 12));
+//        btnLog.setBounds(74, 192, 64, 50);
+//        frame.getContentPane().add(btnLog);
 
         JButton btnCe = new JButton("CE");
         btnCe.addActionListener(new ActionListener() {
@@ -289,7 +302,7 @@ public class Main {
         btn1.setBounds(74, 398, 64, 50);
         frame.getContentPane().add(btn1);
 
-        JButton btnX = new JButton("x3");
+        JButton btnX = new JButton("x^3");
         btnX.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 double a = (Double.parseDouble(textField.getText()));
@@ -303,71 +316,71 @@ public class Main {
         btnX.setBounds(10, 295, 64, 50);
         frame.getContentPane().add(btnX);
 
-        JButton btnEx = new JButton("ex");
-        btnEx.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.exp(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
+//        JButton btnEx = new JButton("ex");
+//        btnEx.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.exp(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnEx.setFont(new Font("Tahoma", Font.PLAIN, 12));
+//        btnEx.setBounds(74, 139, 64, 50);
+//        frame.getContentPane().add(btnEx);
 
-            }
-        });
-        btnEx.setFont(new Font("Tahoma", Font.PLAIN, 12));
-        btnEx.setBounds(74, 139, 64, 50);
-        frame.getContentPane().add(btnEx);
+//        JButton btnx = new JButton("1/x");
+//        btnx.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a =1/ Math.sqrt(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnx.setFont(new Font("Tahoma", Font.BOLD, 12));
+//        btnx.setBounds(9, 191, 64, 50);
+//        frame.getContentPane().add(btnx);
 
-        JButton btnx = new JButton("1/x");
-        btnx.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a =1/ Math.sqrt(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
+//        JButton btnSqrt = new JButton("\u221A");
+//        btnSqrt.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.sqrt(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//
+//            }
+//        });
+//        btnSqrt.setFont(new Font("Tahoma", Font.PLAIN, 17));
+//        btnSqrt.setBounds(10, 139, 64, 50);
+//        frame.getContentPane().add(btnSqrt);
 
-            }
-        });
-        btnx.setFont(new Font("Tahoma", Font.BOLD, 12));
-        btnx.setBounds(9, 191, 64, 50);
-        frame.getContentPane().add(btnx);
+//        JButton btnCos = new JButton("cos");
+//        btnCos.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.cos(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnCos.setFont(new Font("Tahoma", Font.BOLD, 12));
+//        btnCos.setBounds(202, 139, 64, 50);
+//        frame.getContentPane().add(btnCos);
 
-        JButton btnSqrt = new JButton("\u221A");
-        btnSqrt.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.sqrt(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
-
-
-            }
-        });
-        btnSqrt.setFont(new Font("Tahoma", Font.PLAIN, 17));
-        btnSqrt.setBounds(10, 139, 64, 50);
-        frame.getContentPane().add(btnSqrt);
-
-        JButton btnCos = new JButton("cos");
-        btnCos.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.cos(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
-
-            }
-        });
-        btnCos.setFont(new Font("Tahoma", Font.BOLD, 12));
-        btnCos.setBounds(202, 139, 64, 50);
-        frame.getContentPane().add(btnCos);
-
-        JButton btnCos_1 = new JButton("cosh");
-        btnCos_1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.cosh(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
-
-            }
-        });
-        btnCos_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
-        btnCos_1.setBounds(202, 191, 64, 50);
-        frame.getContentPane().add(btnCos_1);
+//        JButton btnCos_1 = new JButton("cosh");
+//        btnCos_1.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.cosh(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnCos_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+//        btnCos_1.setBounds(202, 191, 64, 50);
+//        frame.getContentPane().add(btnCos_1);
 
         JButton btnBackSpace = new JButton("B");
         btnBackSpace.addActionListener(new ActionListener() {
@@ -419,31 +432,31 @@ public class Main {
         btn3.setBounds(202, 398, 64, 50);
         frame.getContentPane().add(btn3);
 
-        JButton btnTan = new JButton("tan");
-        btnTan.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.tan(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
+//        JButton btnTan = new JButton("tan");
+//        btnTan.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.tan(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnTan.setFont(new Font("Tahoma", Font.BOLD, 12));
+//        btnTan.setBounds(266, 139, 64, 50);
+//        frame.getContentPane().add(btnTan);
 
-            }
-        });
-        btnTan.setFont(new Font("Tahoma", Font.BOLD, 12));
-        btnTan.setBounds(266, 139, 64, 50);
-        frame.getContentPane().add(btnTan);
-
-        JButton btnTan_1 = new JButton("tanh");
-        btnTan_1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                double a = Math.tanh(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                textField.setText(textField.getText()+a);
-
-            }
-        });
-        btnTan_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
-        btnTan_1.setBounds(266, 191, 64, 50);
-        frame.getContentPane().add(btnTan_1);
+//        JButton btnTan_1 = new JButton("tanh");
+//        btnTan_1.addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent arg0) {
+//                double a = Math.tanh(Double.parseDouble(textField.getText()));
+//                textField.setText("");
+//                textField.setText(textField.getText()+a);
+//
+//            }
+//        });
+//        btnTan_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+//        btnTan_1.setBounds(266, 191, 64, 50);
+//        frame.getContentPane().add(btnTan_1);
 
         JButton btnPlus = new JButton("+");
         btnPlus.addActionListener(new ActionListener() {
@@ -574,7 +587,7 @@ public class Main {
             }
         });
         buttonGroup.add(rdbtnNewRadioButton);
-        rdbtnNewRadioButton.setBounds(10, 109, 63, 23);
+        rdbtnNewRadioButton.setBounds(10, 215, 63, 23);
         frame.getContentPane().add(rdbtnNewRadioButton);
 
         JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("OFF");
@@ -592,7 +605,7 @@ public class Main {
             }
         });
         buttonGroup.add(rdbtnNewRadioButton_1);
-        rdbtnNewRadioButton_1.setBounds(74, 109, 64, 23);
+        rdbtnNewRadioButton_1.setBounds(74, 215, 64, 23);
         frame.getContentPane().add(rdbtnNewRadioButton_1);
 
         JButton button = new JButton("+/-");
