@@ -1,82 +1,92 @@
-class Stack
-{
-    char a[]=new char[100];
-    int top=-1;
-    void push(char c)
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Stack;
+
+class InfixToPostfix {
+
+    private static int Prec(char ch)
     {
-        try
-        {
-            a[++top]= c;
+        switch (ch) {
+            case '+':
+            case '-':
+                return 1;
+
+            case '*':
+            case '/':
+                return 2;
+
+            case '^':
+                return 3;
         }
-        catch(StringIndexOutOfBoundsException e)
-        {
-            System.out.println("Stack full, no room to push, size=100");
-            System.exit(0);
+        return -1;
+    }
+
+    // The main method that converts
+    // given infix expression
+    // to postfix expression.
+    static String convert(String exp)
+    {
+        // initializing empty String for result
+        String result = new String("");
+
+        // initializing empty stack
+        Deque<Character> stack
+                = new ArrayDeque<Character>();
+
+        for (int i = 0; i < exp.length(); ++i) {
+            char c = exp.charAt(i);
+
+            // If the scanned character is an
+            // operand, add it to output.
+            if (Character.isLetterOrDigit(c))
+                result += " "+ c;
+
+                // If the scanned character is an '(',
+                // push it to the stack.
+            else if (c == '(')
+                stack.push(c);
+
+                // If the scanned character is an ')',
+                // pop and output from the stack
+                // until an '(' is encountered.
+            else if (c == ')') {
+                while (!stack.isEmpty()
+                        && stack.peek() != '(') {
+                    result +=" "+ stack.peek();
+                    stack.pop();
+                }
+
+                stack.pop();
+            }
+            else // an operator is encountered
+            {
+                while (!stack.isEmpty()
+                        && Prec(c) <= Prec(stack.peek())) {
+
+                    result +=" "+ stack.peek();
+                    stack.pop();
+                }
+                stack.push(c);
+            }
         }
+
+        // pop all the operators from the stack
+        while (!stack.isEmpty()) {
+            if (stack.peek() == '(')
+                return "Invalid Expression";
+            result +=" "+ stack.peek();
+            stack.pop();
+        }
+
+        return result;
     }
-    char pop()
+
+    // Driver's code
+    public static void main(String[] args)
     {
-        return a[top--];
-    }
-    boolean isEmpty()
-    {
-        return (top==-1)?true:false;
-    }
-    char peek()
-    {
-        return a[top];
+        String exp = "3+2*9";
+
+        // Function call
+        System.out.println(convert(exp).trim());
     }
 }
-public class InfixToPostfix
-{
-    static Stack operators = new Stack();
-    static String convert(String infix){
-        return toPostfix(infix);
-    }
-private static String toPostfix(String infix)
-//converts an infix expression to postfix  
-    {
-        char symbol;
-        String postfix = "";
-        for(int i=0;i<infix.length();++i)
-//while there is input to be read  
-        {
-            symbol = infix.charAt(i);
-//if it's an operand, add it to the string  
-            if (Character.isLetter(symbol))
-                postfix = postfix +" "+ symbol;
-            else if (symbol=='(')
-//push (  
-            {
-                operators.push(symbol);
-            }
-            else if (symbol==')')
-//push everything back to (  
-            {
-                while (operators.peek() != '(')
-                {
-                    postfix = postfix +" "+ operators.pop();
-                }
-                operators.pop();        //remove '('
-            }
-            else
-//print operators occurring before it that have greater precedence  
-            {
-                while (!operators.isEmpty() && !(operators.peek()=='(') && prec(symbol) <= prec(operators.peek()))
-                    postfix = postfix +" "+ operators.pop();
-                operators.push(symbol);
-            }
-        }
-        while (!operators.isEmpty())
-            postfix = postfix +" "+ operators.pop();
-        return postfix;
-    }
-    static int prec(char x)
-    {
-        if (x == '+' || x == '-')
-            return 1;
-        if (x == '*' || x == '/' || x == '%')
-            return 2;
-        return 0;
-    }
-}  
