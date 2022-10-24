@@ -44,7 +44,7 @@ private static String toPostfix(String infix)
             symbol = infix.charAt(i);
 //if it's an operand, add it to the string  
             if (Character.isLetter(symbol))
-                postfix = postfix + symbol;
+                postfix = postfix +" "+ symbol;
             else if (symbol=='(')
 //push (  
             {
@@ -55,7 +55,7 @@ private static String toPostfix(String infix)
             {
                 while (operators.peek() != '(')
                 {
-                    postfix = postfix + operators.pop();
+                    postfix = postfix +" "+ operators.pop();
                 }
                 operators.pop();        //remove '('
             }
@@ -63,12 +63,12 @@ private static String toPostfix(String infix)
 //print operators occurring before it that have greater precedence  
             {
                 while (!operators.isEmpty() && !(operators.peek()=='(') && prec(symbol) <= prec(operators.peek()))
-                    postfix = postfix + operators.pop();
+                    postfix = postfix +" "+ operators.pop();
                 operators.push(symbol);
             }
         }
         while (!operators.isEmpty())
-            postfix = postfix + operators.pop();
+            postfix = postfix +" "+ operators.pop();
         return postfix;
     }
     static int prec(char x)

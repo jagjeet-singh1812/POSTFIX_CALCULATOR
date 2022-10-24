@@ -68,7 +68,7 @@ class PostfixEval
 
     public static void main(String[] args)
     {
-        String exp = "100 200 + 2 / 5 * 7 +";
+        String exp = "+ 5 * 6 + 2 * 3 / 5 2 * + 2 5";
         System.out.println(evaluatePostfix(exp));
     }
 }
