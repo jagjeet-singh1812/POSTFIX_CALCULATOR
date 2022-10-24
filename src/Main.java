@@ -52,6 +52,8 @@ public class Main {
      * Initialize the contents of the frame.
      */
     private void initialize() {
+
+        // System.out.println("I am able to commit changes");
         frame = new JFrame();
         frame.setForeground(Color.WHITE);
         frame.getContentPane().setForeground(Color.BLACK);
@@ -88,34 +90,34 @@ public class Main {
         JButton btn2 = new JButton("2");
         btn2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn2.getText();
+                String number = postfixField.getText() + btn2.getText();
                 postfixField.setText(number);
             }
         });
         btn2.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn2.setBounds(139-shift, 398, 64, 50);
+        btn2.setBounds(139 - shift, 398, 64, 50);
         frame.getContentPane().add(btn2);
 
         JButton btn5 = new JButton("5");
         btn5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn5.getText();
+                String number = postfixField.getText() + btn5.getText();
                 postfixField.setText(number);
             }
         });
         btn5.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn5.setBounds(139-shift, 347, 64, 50);
+        btn5.setBounds(139 - shift, 347, 64, 50);
         frame.getContentPane().add(btn5);
 
         JButton btn8 = new JButton("8");
         btn8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn8.getText();
+                String number = postfixField.getText() + btn8.getText();
                 postfixField.setText(number);
             }
         });
         btn8.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn8.setBounds(139-shift, 295, 64, 50);
+        btn8.setBounds(139 - shift, 295, 64, 50);
         frame.getContentPane().add(btn8);
 
         JButton btnC = new JButton("C");
@@ -125,29 +127,29 @@ public class Main {
                 postfixField.setText(null);
             }
         });
-        btnC.setBounds(139-shift, 243, 64, 50);
+        btnC.setBounds(139 - shift, 243, 64, 50);
         frame.getContentPane().add(btnC);
 
         JButton btn0 = new JButton("0");
         btn0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn0.getText();
+                String number = postfixField.getText() + btn0.getText();
                 postfixField.setText(number);
             }
         });
         btn0.setFont(new Font("Tahoma", Font.BOLD, 21));
-        btn0.setBounds(74-shift, 449, 129, 50);
+        btn0.setBounds(74 - shift, 449, 129, 50);
         frame.getContentPane().add(btn0);
 
         JButton btnDot = new JButton(".");
         btnDot.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btnDot.getText();
+                String number = postfixField.getText() + btnDot.getText();
                 postfixField.setText(number);
             }
         });
         btnDot.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnDot.setBounds(202-shift, 449, 64, 50);
+        btnDot.setBounds(202 - shift, 449, 64, 50);
         frame.getContentPane().add(btnDot);
 
         JButton btnEqual = new JButton("=");
@@ -166,7 +168,7 @@ public class Main {
             }
         });
         btnEqual.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnEqual.setBounds(266-shift, 449, 64, 50);
+        btnEqual.setBounds(266 - shift, 449, 64, 50);
         frame.getContentPane().add(btnEqual);
 
         JButton btnCe = new JButton("CE");
@@ -178,90 +180,89 @@ public class Main {
             }
         });
         btnCe.setFont(new Font("Tahoma", Font.PLAIN, 19));
-        btnCe.setBounds(74-shift, 243, 64, 50);
+        btnCe.setBounds(74 - shift, 243, 64, 50);
         frame.getContentPane().add(btnCe);
 
         JButton btn7 = new JButton("7");
         btn7.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn7.getText();
+                String number = postfixField.getText() + btn7.getText();
                 postfixField.setText(number);
             }
         });
         btn7.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn7.setBounds(74-shift, 295, 64, 50);
+        btn7.setBounds(74 - shift, 295, 64, 50);
         frame.getContentPane().add(btn7);
 
         JButton btn4 = new JButton("4");
         btn4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn4.getText();
+                String number = postfixField.getText() + btn4.getText();
                 postfixField.setText(number);
             }
         });
         btn4.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn4.setBounds(74-shift, 347, 64, 50);
+        btn4.setBounds(74 - shift, 347, 64, 50);
         frame.getContentPane().add(btn4);
 
         JButton btn1 = new JButton("1");
         btn1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn1.getText();
+                String number = postfixField.getText() + btn1.getText();
                 postfixField.setText(number);
             }
         });
         btn1.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn1.setBounds(74-shift, 398, 64, 50);
+        btn1.setBounds(74 - shift, 398, 64, 50);
         frame.getContentPane().add(btn1);
 
         JButton btnBackSpace = new JButton("B");
         btnBackSpace.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String backSpace=null;
-                if(postfixField.getText().length()>0)
-                {
-                    StringBuilder str=new StringBuilder(postfixField.getText());
-                    str.deleteCharAt(postfixField.getText().length()-1);
-                    backSpace=str.toString();
+                String backSpace = null;
+                if (postfixField.getText().length() > 0) {
+                    StringBuilder str = new StringBuilder(postfixField.getText());
+                    str.deleteCharAt(postfixField.getText().length() - 1);
+                    backSpace = str.toString();
                     postfixField.setText(backSpace);
                 }
             }
         });
         btnBackSpace.setFont(new Font("Tahoma", Font.PLAIN, 19));
-        btnBackSpace.setBounds(202-shift, 243, 64, 50);
+        btnBackSpace.setBounds(202 - shift, 243, 64, 50);
         frame.getContentPane().add(btnBackSpace);
 
         JButton btn9 = new JButton("9");
         btn9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn9.getText();
+                String number = postfixField.getText() + btn9.getText();
                 postfixField.setText(number);
             }
         });
         btn9.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn9.setBounds(202-shift, 295, 64, 50);
+        btn9.setBounds(202 - shift, 295, 64, 50);
         frame.getContentPane().add(btn9);
 
         JButton btn6 = new JButton("6");
         btn6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn6.getText();
+                String number = postfixField.getText() + btn6.getText();
                 postfixField.setText(number);
             }
         });
         btn6.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn6.setBounds(202-shift, 347, 64, 50);
+        btn6.setBounds(202 - shift, 347, 64, 50);
         frame.getContentPane().add(btn6);
 
         JButton btn3 = new JButton("3");
         btn3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                String number=postfixField.getText()+btn3.getText();
+                String number = postfixField.getText() + btn3.getText();
                 postfixField.setText(number);
             }
         });
         btn3.setFont(new Font("Tahoma", Font.BOLD, 23));
-        btn3.setBounds(202-shift, 398, 64, 50);
+        btn3.setBounds(202 - shift, 398, 64, 50);
         frame.getContentPane().add(btn3);
 
 //        JButton btnTan = new JButton("tan");
@@ -297,14 +298,14 @@ public class Main {
 
                 //adding append string
                 String s = postfixField.getText();
-                postfixField.setText(s+"+");
+                postfixField.setText(s + "+");
                 //closing
 
-                operation="+";
+                operation = "+";
             }
         });
         btnPlus.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnPlus.setBounds(266-shift, 243, 64, 50);
+        btnPlus.setBounds(266 - shift, 243, 64, 50);
         frame.getContentPane().add(btnPlus);
 
         JButton btnSub = new JButton("-");
@@ -314,13 +315,13 @@ public class Main {
 
                 //adding append string
                 String s = postfixField.getText();
-                postfixField.setText(s+"-");
+                postfixField.setText(s + "-");
                 //closing
-                operation="-";
+                operation = "-";
             }
         });
         btnSub.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnSub.setBounds(266-shift, 295, 64, 50);
+        btnSub.setBounds(266 - shift, 295, 64, 50);
         frame.getContentPane().add(btnSub);
 
         JButton btnMul = new JButton("*");
@@ -330,14 +331,14 @@ public class Main {
 
                 //adding append string
                 String s = postfixField.getText();
-                postfixField.setText(s+"*");
+                postfixField.setText(s + "*");
                 //closing
 
-                operation="*";
+                operation = "*";
             }
         });
         btnMul.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnMul.setBounds(266-shift, 347, 64, 50);
+        btnMul.setBounds(266 - shift, 347, 64, 50);
         frame.getContentPane().add(btnMul);
 
         JButton btnDivide = new JButton("/");
@@ -348,15 +349,15 @@ public class Main {
 
                 //adding append string
                 String s = postfixField.getText();
-                postfixField.setText(s+"/");
+                postfixField.setText(s + "/");
                 //closing
 
 
-                operation="/";
+                operation = "/";
             }
         });
         btnDivide.setFont(new Font("Tahoma", Font.PLAIN, 21));
-        btnDivide.setBounds(266-shift, 398, 64, 50);
+        btnDivide.setBounds(266 - shift, 398, 64, 50);
         frame.getContentPane().add(btnDivide);
 
 //        JButton btnP_1 = new JButton("x2");
@@ -439,7 +440,6 @@ public class Main {
                 btn8.setEnabled(false);
                 btn9.setEnabled(false);
                 btn0.setEnabled(false);
-                btnDot.setEnabled(false);
 
                 postfixField.setEditable(true);
             }
@@ -451,5 +451,5 @@ public class Main {
 
         rdbtnNewRadioButton.doClick();
     }
-
 }
+
