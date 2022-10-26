@@ -5,22 +5,15 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import java.awt.event.*;
-import java.util.Scanner;
 import javax.swing.JSeparator;
 import javax.swing.JRadioButton;
-import javax.swing.JRadioButtonMenuItem;
 import javax.swing.ButtonGroup;
-import javax.swing.JToggleButton;
 
 public class Main {
 
     private JFrame frame;
     private int shift = 34;
 
-
-    double first;
-    double second;
-    double result;
     String operation;
     String answer;
     private final ButtonGroup buttonGroup = new ButtonGroup();
