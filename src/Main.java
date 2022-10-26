@@ -142,7 +142,6 @@ public class Main {
         btn0.setBounds(74 - shift, 449, 129, 50);
         frame.getContentPane().add(btn0);
 
-
         JButton btnDot = new JButton(".");
         btnDot.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
@@ -166,14 +165,11 @@ public class Main {
                 String postfix = InfixToPostfix.convert(answer).trim();
                 System.out.println(PostfixEval.evaluatePostfix(postfix));
                 outputField.setText(Integer.toString(PostfixEval.evaluatePostfix(postfix)));
-
-
             }
         });
         btnEqual.setFont(new Font("Tahoma", Font.PLAIN, 21));
         btnEqual.setBounds(266 - shift, 449, 64, 50);
         frame.getContentPane().add(btnEqual);
-
 
         JButton btnCe = new JButton("CE");
         btnCe.addActionListener(new ActionListener() {
@@ -338,7 +334,6 @@ public class Main {
         btnDivide.setBounds(266 - shift, 398, 64, 50);
         frame.getContentPane().add(btnDivide);
 
-
         JSeparator separator = new JSeparator();
         separator.setBounds(72, 291, 1, 2);
         frame.getContentPane().add(separator);
@@ -364,6 +359,7 @@ public class Main {
                 btn7.setEnabled(true);
                 btn8.setEnabled(true);
                 btn9.setEnabled(true);
+                btn0.setEnabled(true);
 
                 postfixField.setEditable(false);
             }

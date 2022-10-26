@@ -80,13 +80,4 @@ class InfixToPostfix {
 
         return result;
     }
-
-    // Driver's code
-    public static void main(String[] args)
-    {
-        String exp = "3+2*9";
-
-        // Function call
-        System.out.println(convert(exp).trim());
-    }
 }
