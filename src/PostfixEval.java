@@ -2,7 +2,6 @@ import java.util.Stack;
 
 class PostfixEval
 {
-    // Method to evaluate value of a postfix expression
     static int evaluatePostfix(String exp)
     {
         //create a stack
@@ -64,12 +63,6 @@ class PostfixEval
             }
         }
         return stack.pop();
-    }
-
-    public static void main(String[] args)
-    {
-        String exp = "3 2 9 * +";
-        System.out.println(evaluatePostfix(exp));
     }
 }
 
