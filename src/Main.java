@@ -130,6 +130,7 @@ public class Main {
         btnC.setBounds(139 - shift, 243, 64, 50);
         frame.getContentPane().add(btnC);
 
+
         JButton btn0 = new JButton("0");
         btn0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
@@ -164,7 +165,6 @@ public class Main {
                 String postfix = InfixToPostfix.convert(answer).trim();
                 System.out.println(PostfixEval.evaluatePostfix(postfix));
                 outputField.setText(Integer.toString(PostfixEval.evaluatePostfix(postfix)));
-
             }
         });
         btnEqual.setFont(new Font("Tahoma", Font.PLAIN, 21));
