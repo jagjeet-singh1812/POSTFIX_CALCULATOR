@@ -1,3 +1,7 @@
 # POSTFIX_CALCULATOR
 THIS ARE SOME OF THE GLIMPSES OF THE PROJECT:-
-![Screenshot 2022-10-27 111538](https://user-images.githubusercontent.com/110558458/200490961-b4cb6b65-ceb2-449c-9b18-ed1d2a12ffbc.png)
+1)LAYOUT:-![Screenshot 2022-10-27 111538](https://user-images.githubusercontent.com/110558458/200490961-b4cb6b65-ceb2-449c-9b18-ed1d2a12ffbc.png)
+2)ON CONDITION -->WHERE INPUT CAN ONLY BE TAKEN FROM VIRTUAL KAEYBOARD
+![Screenshot 2022-10-27 111727](https://user-images.githubusercontent.com/110558458/200491243-47a8d7d6-be7b-4e29-a40d-01e6e950182e.png)
+3)OFF CONDITION-->WHERE INPUT IS TAKE FROM THE KEYBOARD I.E HARDWARE ONE
+![Screenshot 2022-10-27 111638](https://user-images.githubusercontent.com/110558458/200491311-250be413-3f36-4cfe-9a8d-7d7b5d8db689.png)
